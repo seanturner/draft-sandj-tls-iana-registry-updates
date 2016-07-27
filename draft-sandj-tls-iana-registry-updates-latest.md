@@ -68,6 +68,8 @@ This document requests that IANA make changes to a number of TLS-related IANA re
 
 - Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-D/TLS 1.3.
 
+- Rename the NewSessionTicket TLS HandshakeType message registry entry {{RFC4057}} to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.
+
 - Rename the SessionTicket TLS to session_ticket to match the nomenclature for the other extensions' names.
 
 This document proposes no changes to the TLS Alert {{I-D.ietf-tls-tls13}}, TLS ContentType {{I-D.ietf-tls-tls13}}, TLS HandshakeType, {{I-D.ietf-tls-tls13}} and TLS Certificate Status Types {{RFC6961}}; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.
@@ -153,6 +155,10 @@ IANA is to update the TLS ClientCertificateType Identifiers registry as follows:
 
     The designated expert {{RFC5226}} only ensures that the specification is publically available.
 
+New Session Ticket TLS Handshake Message Type 
+============================================= 
+ 
+To align with TLS implementations and to align the naming nomenclature for other Handshake message types, IANA is to rename entry 4 in the TLS HandshakeType registry to "new_session_ticket (renamed from NewSessionTicket)". IANA is to also add a reference to this document in the Reference column for entry 4 in the TLS HandshakeType registry.
 
 Session Ticket TLS Extension
 ============================
