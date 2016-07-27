@@ -101,10 +101,10 @@ Many of the TLS-related IANA registries were defined prior to {{RFC5226}} where 
 
 NOTE: Not that this is not a universal change as some registries originally defined with "IETF Consensus" are undergoing other changes either as a result of this document or {{I-D.ietf-tls-rfc4492bis}}.
 
-ExtensionType Values
-====================
+TLS ExtensionType Values
+========================
 
-IANA is to update the ExtensionType Values registry as follows:
+IANA is to update the TLS ExtensionType Values registry as follows:
 
 - Change the registry policy to:
 
@@ -116,10 +116,10 @@ IANA is to update the ExtensionType Values registry as follows:
 
     Note: Experts are to verify that there is in fact a publicly available standard.
 
-Cipher Suite Registry
-=====================
+TLS Cipher Suite Registry
+=========================
 
-IANA is to update the Cipher Suite registry as follows:
+IANA is to update the TLS Cipher Suite registry as follows:
 
 - Change the registry policy to:
 
@@ -157,12 +157,12 @@ IANA is to update the TLS ClientCertificateType Identifiers registry as follows:
 Session Ticket TLS Extension
 ============================
 
-The nomenclature for the registry entries in the ExtensionType Values registry correspond to the presentation language field name except for entry 35.  To ensure that the values in the registry are consistently identified in the registry, IANA is to rename entry 35 to "session_ticket (renamed from "SessionTicket TLS")".
+The nomenclature for the registry entries in the TLS ExtensionType Values registry correspond to the presentation language field name except for entry 35.  To ensure that the values in the registry are consistently identified in the registry, IANA is to rename entry 35 to "session_ticket (renamed from "SessionTicket TLS")".
 
 Orphaned Extensions
 ===================
 
-To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the ExtensionType Values registry:
+To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:
 
     Note:
 
