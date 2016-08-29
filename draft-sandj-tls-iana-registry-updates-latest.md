@@ -36,7 +36,7 @@ normative:
   RFC5878:
   RFC6520:
   RFC7301:
-  I-D.ietf`-tls-tls13:
+  I-D.ietf-tls-tls13:
 
 informative:
   RFC2434:
