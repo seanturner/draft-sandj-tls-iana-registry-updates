@@ -149,8 +149,6 @@ IANA is to update the TLS ClientCertificateType Identifiers registry as follows:
 
     Note:
 
-    Cipher suites marked as "Yes" are those allocated via Standards Track RFCs.  Cipher suites marked as "No" are not; cipher suites marked "No" range from "good" to "bad" from a cryptographic standpoint.
-
     The designated expert {{RFC5226}} only ensures that the specification is publically available.
 
 
