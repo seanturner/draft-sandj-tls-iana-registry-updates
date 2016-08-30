@@ -18,7 +18,7 @@ author:
  -
     ins: J. Salowey
     name: Joe Salowey
-    organization: Tableau
+    organization: Tableau Software
     email: joe@salowey.net
  -
     ins: S. Turner
