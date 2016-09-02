@@ -32,6 +32,7 @@ normative:
   RFC4680:
   RFC5226:
   RFC5246:
+  RFC5705:
   RFC5878:
   RFC6520:
   RFC7301:
@@ -156,6 +157,14 @@ Session Ticket TLS Extension
 ============================
 
 The nomenclature for the registry entries in the ExtensionType Values registry correspond to the presentation language field name except for entry 35.  To ensure that the values in the registry are consistently identified in the registry, IANA is to rename entry 35 to "session_ticket (renamed from "SessionTicket TLS")".
+
+TLS Exporter Label Registry
+===========================
+
+IANA is to add the following note to the TLS Exporter Label Registry:
+
+     {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different. 
+
 
 Orphaned Extensions
 ===================
