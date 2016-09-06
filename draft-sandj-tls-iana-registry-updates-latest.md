@@ -4,7 +4,7 @@ abbrev: D/TLS IANA Registry Updates
 docname: draft-sandj-tls-iana-registry-updates-latest
 date: 2016-07-26
 category: std
-updates: 3749, 4507, 4680, 5246, 5878, 6520, 7301
+updates: 3749, 5077, 4680, 5246, 5878, 6520, 7301
 
 ipr: trust200902
 area: Security
@@ -28,7 +28,7 @@ author:
 
 normative:
   RFC3749:
-  RFC4507:
+  RFC5077:
   RFC4680:
   RFC5226:
   RFC5246:
@@ -69,7 +69,7 @@ This document requests that IANA make changes to a number of TLS-related IANA re
 
 - Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-D/TLS 1.3.
 
-- Rename the NewSessionTicket TLS HandshakeType message registry entry {{RFC4057}} to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.
+- Rename the NewSessionTicket TLS HandshakeType message registry entry {{RFC5077}} to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.
 
 - Rename the SessionTicket TLS to session_ticket to match the nomenclature for the other extensions' names.
 
@@ -154,9 +154,9 @@ IANA is to update the TLS ClientCertificateType Identifiers registry as follows:
 
     The designated expert {{RFC5226}} only ensures that the specification is publically available.
 
-New Session Ticket TLS Handshake Message Type 
-============================================= 
- 
+New Session Ticket TLS Handshake Message Type
+=============================================
+
 To align with TLS implementations and to align the naming nomenclature for other Handshake message types, IANA is to rename entry 4 in the TLS HandshakeType registry to "new_session_ticket (renamed from NewSessionTicket)". IANA is to also add a reference to this document in the Reference column for entry 4 in the TLS HandshakeType registry.
 
 Session Ticket TLS Extension
@@ -169,7 +169,7 @@ TLS Exporter Label Registry
 
 IANA is to add the following note to the TLS Exporter Label Registry:
 
-     {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different. 
+     {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different.
 
 
 Orphaned Extensions
