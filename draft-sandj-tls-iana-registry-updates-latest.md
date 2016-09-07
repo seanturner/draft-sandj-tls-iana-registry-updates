@@ -45,7 +45,7 @@ informative:
 
 --- abstract
 
-This document changes the IANA registry policy for a number of D/TLS-related registries, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).
+This document changes the IANA registry policy for a number of registries related to DTLS and TLS, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).
 
 --- middle
 
@@ -59,7 +59,9 @@ RFC EDITOR: Please delete section prior to publication.
 Introduction
 ============
 
-This document requests that IANA make changes to a number of TLS-related IANA registries:
+This document requests that IANA make changes to a number of DTLS- and TLS-related IANA registries.
+
+In this document, we use the term "D/TLS" to refer to registries that apply to both TLS and DTLS.
 
 - Add "TLS" to registries' names for consistency with other TLS-related registries.
 
