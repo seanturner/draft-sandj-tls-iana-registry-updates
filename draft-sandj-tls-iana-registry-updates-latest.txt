@@ -6,8 +6,8 @@ TLS WG                                                        J. Salowey
 Internet-Draft                                          Tableau Software
 Updates: 3749, 5077, 4680, 5246, 5878,                         S. Turner
          6520, 7301 (if approved)                                  sn3rd
-Intended status: Standards Track                           July 26, 2016
-Expires: January 27, 2017
+Intended status: Standards Track                      September 07, 2016
+Expires: March 11, 2017
 
 
                       D/TLS IANA Registry Updates
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 27, 2017.
+   This Internet-Draft will expire on March 11, 2017.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 1]
+Salowey & Turner         Expires March 11, 2017                 [Page 1]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    the Trust Legal Provisions and are provided without warranty as
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 2]
+Salowey & Turner         Expires March 11, 2017                 [Page 2]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
       registry-focused, non-RFC-reading what's expected from the
@@ -165,9 +165,9 @@ Internet-Draft         D/TLS IANA Registry Updates             July 2016
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 3]
+Salowey & Turner         Expires March 11, 2017                 [Page 3]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    IANA is also to add a reference to this document for the registry
@@ -221,9 +221,9 @@ Internet-Draft         D/TLS IANA Registry Updates             July 2016
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 4]
+Salowey & Turner         Expires March 11, 2017                 [Page 4]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    o  Add a "Recommended" column to the cipher suite registry.  All
@@ -277,9 +277,9 @@ Internet-Draft         D/TLS IANA Registry Updates             July 2016
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 5]
+Salowey & Turner         Expires March 11, 2017                 [Page 5]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    consistently identified in the registry, IANA is to rename entry 35
@@ -333,9 +333,9 @@ The following extensions are only applicable to D/TLS protocol vesions prior to 
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 6]
+Salowey & Turner         Expires March 11, 2017                 [Page 6]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    o  Update the "References" in the TLS Compression Method Identifiers,
@@ -389,9 +389,9 @@ Internet-Draft         D/TLS IANA Registry Updates             July 2016
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 7]
+Salowey & Turner         Expires March 11, 2017                 [Page 7]
 
-Internet-Draft         D/TLS IANA Registry Updates             July 2016
+Internet-Draft         D/TLS IANA Registry Updates        September 2016
 
 
    [RFC5878]  Brown, M. and R. Housley, "Transport Layer Security (TLS)
@@ -445,4 +445,4 @@ Authors' Addresses
 
 
 
-Salowey & Turner        Expires January 27, 2017                [Page 8]
+Salowey & Turner         Expires March 11, 2017                 [Page 8]
