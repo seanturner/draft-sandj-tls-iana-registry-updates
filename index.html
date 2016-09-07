@@ -278,13 +278,14 @@ li, p {
 <link href="#rfc.section.8" rel="Chapter" title="8 New Session Ticket TLS Handshake Message Type"/>
 <link href="#rfc.section.9" rel="Chapter" title="9 Session Ticket TLS Extension"/>
 <link href="#rfc.section.10" rel="Chapter" title="10 TLS Exporter Label Registry"/>
-<link href="#rfc.section.11" rel="Chapter" title="11 Orphaned Extensions"/>
-<link href="#rfc.section.12" rel="Chapter" title="12 Orphaned Registries"/>
-<link href="#rfc.section.13" rel="Chapter" title="13 Security Considerations"/>
-<link href="#rfc.section.14" rel="Chapter" title="14 IANA Considerations"/>
-<link href="#rfc.references" rel="Chapter" title="15 References"/>
-<link href="#rfc.references.1" rel="Chapter" title="15.1 Normative References"/>
-<link href="#rfc.references.2" rel="Chapter" title="15.2 Informative References"/>
+<link href="#rfc.section.11" rel="Chapter" title="11 Add Missing Item to TLS Alert Registry"/>
+<link href="#rfc.section.12" rel="Chapter" title="12 Orphaned Extensions"/>
+<link href="#rfc.section.13" rel="Chapter" title="13 Orphaned Registries"/>
+<link href="#rfc.section.14" rel="Chapter" title="14 Security Considerations"/>
+<link href="#rfc.section.15" rel="Chapter" title="15 IANA Considerations"/>
+<link href="#rfc.references" rel="Chapter" title="16 References"/>
+<link href="#rfc.references.1" rel="Chapter" title="16.1 Normative References"/>
+<link href="#rfc.references.2" rel="Chapter" title="16.2 Informative References"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -368,13 +369,14 @@ li, p {
 <li>8.   <a href="#rfc.section.8">New Session Ticket TLS Handshake Message Type</a></li>
 <li>9.   <a href="#rfc.section.9">Session Ticket TLS Extension</a></li>
 <li>10.   <a href="#rfc.section.10">TLS Exporter Label Registry</a></li>
-<li>11.   <a href="#rfc.section.11">Orphaned Extensions</a></li>
-<li>12.   <a href="#rfc.section.12">Orphaned Registries</a></li>
-<li>13.   <a href="#rfc.section.13">Security Considerations</a></li>
-<li>14.   <a href="#rfc.section.14">IANA Considerations</a></li>
-<li>15.   <a href="#rfc.references">References</a></li>
-<ul><li>15.1.   <a href="#rfc.references.1">Normative References</a></li>
-<li>15.2.   <a href="#rfc.references.2">Informative References</a></li>
+<li>11.   <a href="#rfc.section.11">Add Missing Item to TLS Alert Registry</a></li>
+<li>12.   <a href="#rfc.section.12">Orphaned Extensions</a></li>
+<li>13.   <a href="#rfc.section.13">Orphaned Registries</a></li>
+<li>14.   <a href="#rfc.section.14">Security Considerations</a></li>
+<li>15.   <a href="#rfc.section.15">IANA Considerations</a></li>
+<li>16.   <a href="#rfc.references">References</a></li>
+<ul><li>16.1.   <a href="#rfc.references.1">Normative References</a></li>
+<li>16.2.   <a href="#rfc.references.2">Informative References</a></li>
 </ul><li><a href="#rfc.authors">Authors' Addresses</a></li>
 
 
@@ -394,6 +396,7 @@ li, p {
   <li>Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-D/TLS 1.3.</li>
   <li>Rename the NewSessionTicket TLS HandshakeType message registry entry <a href="#RFC5077">[RFC5077]</a> to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.</li>
   <li>Rename the SessionTicket TLS to session_ticket to match the nomenclature for the other extensions&#8217; names.</li>
+  <li>Add missing entry to the TLS Alert Registry for the no_application_protocol alert defined in <a href="#RFC7301">[RFC7301]</a></li>
 </ul>
 <p id="rfc.section.2.p.3">This document proposes no changes to the TLS Alert <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS ContentType <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS HandshakeType, <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a> and TLS Certificate Status Types <a href="#RFC6961">[RFC6961]</a>; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.</p>
 <p id="rfc.section.2.p.4">This document proposes no changes to the EC Curve Type, EC Point Format registries , and Supported Groups Registry (see <a href="#I-D.ietf-tls-rfc4492bis">[I-D.ietf-tls-rfc4492bis]</a>).</p>
@@ -455,15 +458,20 @@ li, p {
 <pre>
  {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different.
 </pre>
-<h1 id="rfc.section.11"><a href="#rfc.section.11">11.</a> <a href="#orphaned-extensions" id="orphaned-extensions">Orphaned Extensions</a></h1>
-<p id="rfc.section.11.p.1">To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:</p>
+<h1 id="rfc.section.11"><a href="#rfc.section.11">11.</a> <a href="#add-missing-item-to-tls-alert-registry" id="add-missing-item-to-tls-alert-registry">Add Missing Item to TLS Alert Registry</a></h1>
+<p id="rfc.section.11.p.1">IANA is to add the following entry to the TLS Alert Registry (the entry was omitted from the IANA instructions in <a href="#RFC7301">[RFC7301]</a>):</p>
+<pre>
+120   no_application_protocol  Y  [RFC7301]
+</pre>
+<h1 id="rfc.section.12"><a href="#rfc.section.12">12.</a> <a href="#orphaned-extensions" id="orphaned-extensions">Orphaned Extensions</a></h1>
+<p id="rfc.section.12.p.1">To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:</p>
 <pre>
 Note:
 
 The following extensions are only applicable to D/TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
 </pre>
-<h1 id="rfc.section.12"><a href="#rfc.section.12">12.</a> <a href="#orphaned-registries" id="orphaned-registries">Orphaned Registries</a></h1>
-<p id="rfc.section.12.p.1">To make it clear that D/TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of D/TLS protocol versions prior to 1.3), IANA is to:</p>
+<h1 id="rfc.section.13"><a href="#rfc.section.13">13.</a> <a href="#orphaned-registries" id="orphaned-registries">Orphaned Registries</a></h1>
+<p id="rfc.section.13.p.1">To make it clear that D/TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of D/TLS protocol versions prior to 1.3), IANA is to:</p>
 <p/>
 
 <ul>
@@ -471,12 +479,12 @@ The following extensions are only applicable to D/TLS protocol vesions prior to 
   <li>Add the following to the TLS Hash Algorithm <a href="#RFC5246">[RFC5246]</a> and TLS SignatureAlgorithm registries <a href="#RFC5246">[RFC5246]</a>:  <br/><br/> Note:  <br/><br/> The values in this registry are only applicable to D/TLS protocol versions prior to 1.3.</li>
   <li>Update the &#8220;References&#8221; in the TLS Compression Method Identifiers, TLS Hash Algorithm <a href="#RFC5246">[RFC5246]</a> and TLS SignatureAlgorithm registries to also refer to this document.</li>
 </ul>
-<h1 id="rfc.section.13"><a href="#rfc.section.13">13.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
-<p id="rfc.section.13.p.1">TBSL</p>
-<h1 id="rfc.section.14"><a href="#rfc.section.14">14.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
-<p id="rfc.section.14.p.1">This document is entirely about changes to TLS-related IANA registries.</p>
-<h1 id="rfc.references"><a href="#rfc.references">15.</a> References</h1>
-<h1 id="rfc.references.1"><a href="#rfc.references.1">15.1.</a> Normative References</h1>
+<h1 id="rfc.section.14"><a href="#rfc.section.14">14.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
+<p id="rfc.section.14.p.1">TBSL</p>
+<h1 id="rfc.section.15"><a href="#rfc.section.15">15.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
+<p id="rfc.section.15.p.1">This document is entirely about changes to TLS-related IANA registries.</p>
+<h1 id="rfc.references"><a href="#rfc.references">16.</a> References</h1>
+<h1 id="rfc.references.1"><a href="#rfc.references.1">16.1.</a> Normative References</h1>
 <table>
   <tbody>
     <tr>
@@ -541,7 +549,7 @@ The following extensions are only applicable to D/TLS protocol vesions prior to 
     </tr>
   </tbody>
 </table>
-<h1 id="rfc.references.2"><a href="#rfc.references.2">15.2.</a> Informative References</h1>
+<h1 id="rfc.references.2"><a href="#rfc.references.2">16.2.</a> Informative References</h1>
 <table>
   <tbody>
     <tr>
