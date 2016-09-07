@@ -3,7 +3,7 @@
 This is the working area for the Individual internet-draft, "D/TLS IANA Registry Updates".
 
 * [Editor's copy](https://seanturner.github.io/draft-sandj-tls-iana-registry-updates/)
-* [Individual Draft] (https://tools.ietf.org/html/draft-sandj-tls-iana-registry-updates-latest)
+* [Individual Draft] (https://tools.ietf.org/html/draft-sandj-tls-iana-registry-updates)
 
 
 ## Building the Draft
