@@ -73,6 +73,8 @@ This document requests that IANA make changes to a number of TLS-related IANA re
 
 - Rename the SessionTicket TLS to session_ticket to match the nomenclature for the other extensions' names.
 
+- Add missing entry to the TLS Alert Registry for the no_application_protocol alert defined in {{RFC7301}}
+
 This document proposes no changes to the TLS Alert {{I-D.ietf-tls-tls13}}, TLS ContentType {{I-D.ietf-tls-tls13}}, TLS HandshakeType, {{I-D.ietf-tls-tls13}} and TLS Certificate Status Types {{RFC6961}}; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.
 
 This document proposes no changes to the EC Curve Type, EC Point Format registries , and Supported Groups Registry (see {{I-D.ietf-tls-rfc4492bis}}).
@@ -170,6 +172,13 @@ TLS Exporter Label Registry
 IANA is to add the following note to the TLS Exporter Label Registry:
 
      {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different.
+
+Add Missing Item to TLS Alert Registry
+===========================================================
+
+IANA is to add the following entry to the TLS Alert Registry (the entry was omitted from the IANA instructions in {{RFC7301}}):
+
+    120   no_application_protocol  Y  [RFC7301]
 
 
 Orphaned Extensions
