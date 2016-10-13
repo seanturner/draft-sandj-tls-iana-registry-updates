@@ -295,8 +295,8 @@ li, p {
   <meta name="dct.creator" content="Salowey, J. and S. Turner" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-sandj-tls-iana-registry-updates-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2016-9-07" />
-  <meta name="dct.abstract" content="This document changes the IANA registry policy for a number of D/TLS-related registries, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header)." />
-  <meta name="description" content="This document changes the IANA registry policy for a number of D/TLS-related registries, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header)." />
+  <meta name="dct.abstract" content="This document changes the IANA registry policy for a number of registries related to DTLS and TLS, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header)." />
+  <meta name="description" content="This document changes the IANA registry policy for a number of registries related to DTLS and TLS, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header)." />
 
 </head>
 
@@ -340,7 +340,7 @@ li, p {
   <h1 id="rfc.abstract">
   <a href="#rfc.abstract">Abstract</a>
 </h1>
-<p>This document changes the IANA registry policy for a number of D/TLS-related registries, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).</p>
+<p>This document changes the IANA registry policy for a number of registries related to DTLS and TLS, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).</p>
 <h1 id="rfc.status">
   <a href="#rfc.status">Status of This Memo</a>
 </h1>
@@ -386,21 +386,22 @@ li, p {
 <p id="rfc.section.1.p.1">As the authors of this draft are also the WG chairs, the responsible Area Director has agreed to judge consensus.</p>
 <p id="rfc.section.1.p.2">RFC EDITOR: Please delete section prior to publication.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#introduction" id="introduction">Introduction</a></h1>
-<p id="rfc.section.2.p.1">This document requests that IANA make changes to a number of TLS-related IANA registries:</p>
+<p id="rfc.section.2.p.1">This document requests that IANA make changes to a number of DTLS- and TLS-related IANA registries.</p>
+<p id="rfc.section.2.p.2">In this document, we use the term &#8220;(D)TLS&#8221; to refer to registries that apply to both TLS and DTLS.</p>
 <p/>
 
 <ul>
   <li>Add &#8220;TLS&#8221; to registries&#8217; names for consistency with other TLS-related registries.</li>
   <li>Change the IANA registry policy <a href="#RFC5226">[RFC5226]</a> for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.</li>
   <li>Add the designated expert intructions as a note to the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries to inform IANA-registry-focused, non-RFC-reading what&#8217;s expected from the registry.</li>
-  <li>Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-D/TLS 1.3.</li>
+  <li>Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-(D)TLS 1.3.</li>
   <li>Rename the NewSessionTicket TLS HandshakeType message registry entry <a href="#RFC5077">[RFC5077]</a> to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.</li>
   <li>Rename the SessionTicket TLS to session_ticket to match the nomenclature for the other extensions&#8217; names.</li>
   <li>Add missing entry to the TLS Alert Registry for the no_application_protocol alert defined in <a href="#RFC7301">[RFC7301]</a></li>
 </ul>
-<p id="rfc.section.2.p.3">This document proposes no changes to the TLS Alert <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS ContentType <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS HandshakeType, <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a> and TLS Certificate Status Types <a href="#RFC6961">[RFC6961]</a>; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.</p>
-<p id="rfc.section.2.p.4">This document proposes no changes to the EC Curve Type, EC Point Format registries , and Supported Groups Registry (see <a href="#I-D.ietf-tls-rfc4492bis">[I-D.ietf-tls-rfc4492bis]</a>).</p>
-<p id="rfc.section.2.p.5">The lengthy updates header is a result of requests for IANA to refer to this draft in addition to the original RFC that defined a particular registry.</p>
+<p id="rfc.section.2.p.4">This document proposes no changes to the TLS Alert <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS ContentType <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a>, TLS HandshakeType, <a href="#I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</a> and TLS Certificate Status Types <a href="#RFC6961">[RFC6961]</a>; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.</p>
+<p id="rfc.section.2.p.5">This document proposes no changes to the EC Curve Type, EC Point Format registries , and Supported Groups Registry (see <a href="#I-D.ietf-tls-rfc4492bis">[I-D.ietf-tls-rfc4492bis]</a>).</p>
+<p id="rfc.section.2.p.6">The lengthy updates header is a result of requests for IANA to refer to this draft in addition to the original RFC that defined a particular registry.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#add-tls-to-registry-names" id="add-tls-to-registry-names">Add &#8220;TLS&#8221; to Registry Names</a></h1>
 <p id="rfc.section.3.p.1">IANA is to update the names of the following registries to add &#8220;TLS&#8221; to for consistency with the other TLS-related extensions:</p>
 <p/>
@@ -464,19 +465,19 @@ li, p {
 120   no_application_protocol  Y  [RFC7301]
 </pre>
 <h1 id="rfc.section.12"><a href="#rfc.section.12">12.</a> <a href="#orphaned-extensions" id="orphaned-extensions">Orphaned Extensions</a></h1>
-<p id="rfc.section.12.p.1">To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:</p>
+<p id="rfc.section.12.p.1">To make it clear that (D)TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of (D)TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:</p>
 <pre>
 Note:
 
-The following extensions are only applicable to D/TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
+The following extensions are only applicable to (D)TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
 </pre>
 <h1 id="rfc.section.13"><a href="#rfc.section.13">13.</a> <a href="#orphaned-registries" id="orphaned-registries">Orphaned Registries</a></h1>
-<p id="rfc.section.13.p.1">To make it clear that D/TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of D/TLS protocol versions prior to 1.3), IANA is to:</p>
+<p id="rfc.section.13.p.1">To make it clear that (D)TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of (D)TLS protocol versions prior to 1.3), IANA is to:</p>
 <p/>
 
 <ul>
-  <li>Add the following to the TLS Compression Method Identifiers registry <a href="#RFC3749">[RFC3749]</a>:  <br/><br/> Note:  <br/><br/> Value 0 (NULL) is the only value in this registry applicable to D/TLS protocol versions prior to 1.3.</li>
-  <li>Add the following to the TLS Hash Algorithm <a href="#RFC5246">[RFC5246]</a> and TLS SignatureAlgorithm registries <a href="#RFC5246">[RFC5246]</a>:  <br/><br/> Note:  <br/><br/> The values in this registry are only applicable to D/TLS protocol versions prior to 1.3.</li>
+  <li>Add the following to the TLS Compression Method Identifiers registry <a href="#RFC3749">[RFC3749]</a>:  <br/><br/> Note:  <br/><br/> Value 0 (NULL) is the only value in this registry applicable to (D)TLS protocol version 1.3 or later.</li>
+  <li>Add the following to the TLS Hash Algorithm <a href="#RFC5246">[RFC5246]</a> and TLS SignatureAlgorithm registries <a href="#RFC5246">[RFC5246]</a>:  <br/><br/> Note:  <br/><br/> The values in this registry are only applicable to (D)TLS protocol versions prior to 1.3.</li>
   <li>Update the &#8220;References&#8221; in the TLS Compression Method Identifiers, TLS Hash Algorithm <a href="#RFC5246">[RFC5246]</a> and TLS SignatureAlgorithm registries to also refer to this document.</li>
 </ul>
 <h1 id="rfc.section.14"><a href="#rfc.section.14">14.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
@@ -491,7 +492,7 @@ The following extensions are only applicable to D/TLS protocol vesions prior to 
       <td class="reference">
         <b id="I-D.ietf-tls-tls13">[I-D.ietf-tls-tls13]</b>
       </td>
-      <td class="top"><a>Rescorla, E.</a>, "<a href="http://tools.ietf.org/html/draft-ietf-tls-tls13-14">The Transport Layer Security (TLS) Protocol Version 1.3</a>", Internet-Draft draft-ietf-tls-tls13-14, July 2016.</td>
+      <td class="top"><a>Rescorla, E.</a>, "<a href="http://tools.ietf.org/html/draft-ietf-tls-tls13-16">The Transport Layer Security (TLS) Protocol Version 1.3</a>", Internet-Draft draft-ietf-tls-tls13-16, September 2016.</td>
     </tr>
     <tr>
       <td class="reference">
