@@ -45,7 +45,7 @@ informative:
 
 --- abstract
 
-This document changes the IANA registry policy for a number of D/TLS-related registries, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).
+This document changes the IANA registry policy for a number of registries related to DTLS and TLS, renames some of the registries for consistency, and adds notes to many of the registries.  As a result, this document updates many RFCs (see updates header).
 
 --- middle
 
@@ -59,7 +59,9 @@ RFC EDITOR: Please delete section prior to publication.
 Introduction
 ============
 
-This document requests that IANA make changes to a number of TLS-related IANA registries:
+This document requests that IANA make changes to a number of DTLS- and TLS-related IANA registries.
+
+In this document, we use the term "(D)TLS" to refer to registries that apply to both TLS and DTLS.
 
 - Add "TLS" to registries' names for consistency with other TLS-related registries.
 
@@ -67,7 +69,7 @@ This document requests that IANA make changes to a number of TLS-related IANA re
 
 - Add the designated expert intructions as a note to the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries to inform IANA-registry-focused, non-RFC-reading what's expected from the registry.
 
-- Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-D/TLS 1.3.
+- Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-(D)TLS 1.3.
 
 - Rename the NewSessionTicket TLS HandshakeType message registry entry {{RFC5077}} to new_session_ticket to match the naming nomenclature for the other Handshake type names and to match with existing implementations.
 
@@ -184,28 +186,28 @@ IANA is to add the following entry to the TLS Alert Registry (the entry was omit
 Orphaned Extensions
 ===================
 
-To make it clear that D/TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of D/TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:
+To make it clear that (D)TLS 1.3 has orphaned certain extensions (i.e., they are only applicable to version of (D)TLS prior to 1.3), IANA is to add the following to the TLS ExtensionType Values registry:
 
     Note:
 
-    The following extensions are only applicable to D/TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
+    The following extensions are only applicable to (D)TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
 
 Orphaned Registries
 ===================
 
-To make it clear that D/TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of D/TLS protocol versions prior to 1.3), IANA is to:
+To make it clear that (D)TLS 1.3 has orphaned certain registries (i.e., they are only applicable to version of (D)TLS protocol versions prior to 1.3), IANA is to:
 
 - Add the following to the TLS Compression Method Identifiers registry {{RFC3749}}:
 
     Note:
 
-    Value 0 (NULL) is the only value in this registry applicable to D/TLS protocol versions prior to 1.3.
+    Value 0 (NULL) is the only value in this registry applicable to (D)TLS protocol version 1.3 or later.
 
 - Add the following to the TLS Hash Algorithm {{RFC5246}} and TLS SignatureAlgorithm registries {{RFC5246}}:
 
     Note:
 
-    The values in this registry are only applicable to D/TLS protocol versions prior to 1.3.
+    The values in this registry are only applicable to (D)TLS protocol versions prior to 1.3.
 
 - Update the "References" in the TLS Compression Method Identifiers, TLS Hash Algorithm {{RFC5246}} and TLS SignatureAlgorithm registries to also refer to this document.
 
