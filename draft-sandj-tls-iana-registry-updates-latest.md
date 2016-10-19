@@ -61,7 +61,7 @@ Introduction
 
 This document requests that IANA make changes to a number of TLS-related IANA registries:
 
-- Add "TLS" to registries' names for consistency with other qTLS-related registries.
+- Add "TLS" to registries' names for consistency with other TLS-related registries.
 
 - Change the IANA registry policy {{RFC5226}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.
 
