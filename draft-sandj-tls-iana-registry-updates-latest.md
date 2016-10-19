@@ -61,7 +61,7 @@ Introduction
 
 This document requests that IANA make changes to a number of TLS-related IANA registries:
 
-- Add "TLS" to registries' names for consistency with other TLS-related registries.
+- Add "TLS" to registries' names for consistency with other qTLS-related registries.
 
 - Change the IANA registry policy {{RFC5226}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.
 
@@ -130,16 +130,53 @@ IANA is to update the TLS Cipher Suite registry as follows:
 
     Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC2434}}.
 
-- Add a "Recommended" column to the cipher suite registry.  All ciphers listed in {{I-D.ietf-tls-tls13}} Appendix A.4 are marked as "Yes".  All other cipher suites are marked as "No".
+- Add a "Recommended" column to the cipher suite registry.  The cipher suites that follow in the two tables are marked as "Yes". All other cipher suites are marked as "No".
+
+NOTE: The cipher suites that follow are standards track server-authenticated (and optionally client-authenticated) cipher suites which are currently available in TLS 1.2. The notable exception are the ECDHE AES GCM cipher suites which are not yet standards track prior to the publication of this specification, but this document promotes those 4 cipher suites to standards track (see TO-DO insert reference).
+
+Cipher Suite Name                             | Value
+----------------------------------------------+------------
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256           | {0x00,0x9E}
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384           | {0x00,0x9F}
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256       | {0xC0,0x2B}
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384       | {0xC0,0x2C}
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256         | {0xC0,0x2F}
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384         | {0xC0,0x30}
+TLS_DHE_RSA_WITH_AES_128_CCM                  | {0xC0,0x9E}
+TLS_DHE_RSA_WITH_AES_256_CCM                  | {0xC0,0x9F}
+TLS_DHE_RSA_WITH_AES_128_CCM_8                | {0xC0,0xA2}
+TLS_DHE_RSA_WITH_AES_256_CCM_8                | {0xC0,0xA3}
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   | {0xCC,0xA8}
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xA9}
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAA}
+
+NOTE: The cipher suites that follow are standards track ephemeral pre-shared key cipher suites which are available in TLS 1.2.  [RFC6655] is inconsistent with respect to the ordering of components within PSK AES CCM cipher suite names; those names are used here without modification.
+
+Cipher Suite Name                             | Value
+----------------------------------------------+------------
+TLS_DHE_PSK_WITH_AES_128_GCM_SHA256           | {0x00,0xAA}
+TLS_DHE_PSK_WITH_AES_256_GCM_SHA384           | {0x00,0xAB}
+TLS_DHE_PSK_WITH_AES_128_CCM                  | {0xC0,0xA6}
+TLS_DHE_PSK_WITH_AES_256_CCM                  | {0xC0,0xA7}
+TLS_PSK_DHE_WITH_AES_128_CCM_8                | {0xC0,0xAA}
+TLS_PSK_DHE_WITH_AES_256_CCM_8                | {0xC0,0xAB}
+TLS_ECDHE_PSK_WITH_AES_128_GCM_SHA256         | {TBD}
+TLS_ECDHE_PSK_WITH_AES_256_GCM_SHA384         | {TBD}
+TLS_ECDHE_PSK_WITH_AES_128_CCM_8_SHA256       | {TBD}
+TLS_ECDHE_PSK_WITH_AES_128_CCM_SHA256         | {TBD}
+TLS_ECDHE_PSK_WITH_AES_256_CCM_SHA384         | {TBD}
+TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256   | {0xCC,0xAC}
+TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAD}
 
 - Add the following:
 
-    Note:
+    Notes:
+
+    Although TLS 1.3 uses the same cipher suite space as previous versions of TLS, TLS 1.3 cipher suites are defined differently, only specifying the symmetric ciphers, and cannot it be used for TLS 1.2. Similarly, TLS 1.2 and lower cipher suites cannot be used with TLS 1.3.
 
     Cipher suites marked as "Yes" are those allocated via Standards Track RFCs.  Cipher suites marked as "No" are not; cipher suites marked "No" range from "good" to "bad" from a cryptographic standpoint.
 
     The designated expert {{RFC5226}} only ensures that the specification is publically available.
-
 
 TLS ClientCertificateType Identifiers
 =====================================
