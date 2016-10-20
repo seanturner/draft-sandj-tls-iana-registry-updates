@@ -70,18 +70,18 @@ Table of Contents
    5.  TLS ExtensionType Values  . . . . . . . . . . . . . . . . . .   4
    6.  TLS Cipher Suite Registry . . . . . . . . . . . . . . . . . .   4
    7.  TLS ClientCertificateType Identifiers . . . . . . . . . . . .   6
-   8.  New Session Ticket TLS Handshake Message Type . . . . . . . .   6
+   8.  New Session Ticket TLS Handshake Message Type . . . . . . . .   7
    9.  Session Ticket TLS Extension  . . . . . . . . . . . . . . . .   7
    10. TLS Exporter Label Registry . . . . . . . . . . . . . . . . .   7
    11. Add Missing Item to TLS Alert Registry  . . . . . . . . . . .   7
    12. Orphaned Extensions . . . . . . . . . . . . . . . . . . . . .   7
-   13. Orphaned Registries . . . . . . . . . . . . . . . . . . . . .   7
+   13. Orphaned Registries . . . . . . . . . . . . . . . . . . . . .   8
    14. Security Considerations . . . . . . . . . . . . . . . . . . .   8
    15. IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
    16. References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
      16.1.  Normative References . . . . . . . . . . . . . . . . . .   8
      16.2.  Informative References . . . . . . . . . . . . . . . . .   9
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  10
 
 1.  Process Note
 
@@ -242,20 +242,21 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
    promotes those 4 cipher suites to standards track (see TO-DO insert
    reference).
 
-   Cipher Suite Name | Value -------------------------------+--------
-   TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 | {0x00,0x9E}
-   TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 | {0x00,0x9F}
-   TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 | {0xC0,0x2B}
-   TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 | {0xC0,0x2C}
-   TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 | {0xC0,0x2F}
-   TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 | {0xC0,0x30}
-   TLS_DHE_RSA_WITH_AES_128_CCM | {0xC0,0x9E}
-   TLS_DHE_RSA_WITH_AES_256_CCM | {0xC0,0x9F}
-   TLS_DHE_RSA_WITH_AES_128_CCM_8 | {0xC0,0xA2}
-   TLS_DHE_RSA_WITH_AES_256_CCM_8 | {0xC0,0xA3}
-   TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xA8}
+   Cipher Suite Name                             | Value
+   ----------------------------------------------+------------
+   TLS_DHE_RSA_WITH_AES_128_GCM_SHA256           | {0x00,0x9E}
+   TLS_DHE_RSA_WITH_AES_256_GCM_SHA384           | {0x00,0x9F}
+   TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256       | {0xC0,0x2B}
+   TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384       | {0xC0,0x2C}
+   TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256         | {0xC0,0x2F}
+   TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384         | {0xC0,0x30}
+   TLS_DHE_RSA_WITH_AES_128_CCM                  | {0xC0,0x9E}
+   TLS_DHE_RSA_WITH_AES_256_CCM                  | {0xC0,0x9F}
+   TLS_DHE_RSA_WITH_AES_128_CCM_8                | {0xC0,0xA2}
+   TLS_DHE_RSA_WITH_AES_256_CCM_8                | {0xC0,0xA3}
+   TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256   | {0xCC,0xA8}
    TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xA9}
-   TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xAA}
+   TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAA}
 
    NOTE: The cipher suites that follow are standards track ephemeral
    pre-shared key cipher suites which are available in TLS 1.2.
@@ -263,17 +264,16 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
    within PSK AES CCM cipher suite names; those names are used here
    without modification.
 
-   Cipher Suite Name | Value -------------------------------+--------
-   TLS_DHE_PSK_WITH_AES_128_GCM_SHA256 | {0x00,0xAA}
-   TLS_DHE_PSK_WITH_AES_256_GCM_SHA384 | {0x00,0xAB}
-   TLS_DHE_PSK_WITH_AES_128_CCM | {0xC0,0xA6}
-   TLS_DHE_PSK_WITH_AES_256_CCM | {0xC0,0xA7}
-   TLS_PSK_DHE_WITH_AES_128_CCM_8 | {0xC0,0xAA}
-   TLS_PSK_DHE_WITH_AES_256_CCM_8 | {0xC0,0xAB}
-   TLS_ECDHE_PSK_WITH_AES_128_GCM_SHA256 | {TBD}
-   TLS_ECDHE_PSK_WITH_AES_256_GCM_SHA384 | {TBD}
-   TLS_ECDHE_PSK_WITH_AES_128_CCM_8_SHA256 | {TBD}
-   TLS_ECDHE_PSK_WITH_AES_128_CCM_SHA256 | {TBD}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -282,9 +282,21 @@ Salowey & Turner         Expires April 23, 2017                 [Page 5]
 Internet-Draft         D/TLS IANA Registry Updates          October 2016
 
 
-   TLS_ECDHE_PSK_WITH_AES_256_CCM_SHA384 | {TBD}
-   TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xAC}
-   TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xAD}
+   Cipher Suite Name                             | Value
+   ----------------------------------------------+------------
+   TLS_DHE_PSK_WITH_AES_128_GCM_SHA256           | {0x00,0xAA}
+   TLS_DHE_PSK_WITH_AES_256_GCM_SHA384           | {0x00,0xAB}
+   TLS_DHE_PSK_WITH_AES_128_CCM                  | {0xC0,0xA6}
+   TLS_DHE_PSK_WITH_AES_256_CCM                  | {0xC0,0xA7}
+   TLS_PSK_DHE_WITH_AES_128_CCM_8                | {0xC0,0xAA}
+   TLS_PSK_DHE_WITH_AES_256_CCM_8                | {0xC0,0xAB}
+   TLS_ECDHE_PSK_WITH_AES_128_GCM_SHA256         | {TBD}
+   TLS_ECDHE_PSK_WITH_AES_256_GCM_SHA384         | {TBD}
+   TLS_ECDHE_PSK_WITH_AES_128_CCM_8_SHA256       | {TBD}
+   TLS_ECDHE_PSK_WITH_AES_128_CCM_SHA256         | {TBD}
+   TLS_ECDHE_PSK_WITH_AES_256_CCM_SHA384         | {TBD}
+   TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256   | {0xCC,0xAC}
+   TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAD}
 
    o  Add the following:
 
@@ -318,6 +330,14 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
 
       Note:
 
+
+
+
+Salowey & Turner         Expires April 23, 2017                 [Page 6]
+
+Internet-Draft         D/TLS IANA Registry Updates          October 2016
+
+
       The designated expert [RFC5226] only ensures that the
       specification is publically available.
 
@@ -329,14 +349,6 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
    (renamed from NewSessionTicket)".  IANA is to also add a reference to
    this document in the Reference column for entry 4 in the TLS
    HandshakeType registry.
-
-
-
-
-Salowey & Turner         Expires April 23, 2017                 [Page 6]
-
-Internet-Draft         D/TLS IANA Registry Updates          October 2016
-
 
 9.  Session Ticket TLS Extension
 
@@ -370,6 +382,18 @@ Note:
 
 The following extensions are only applicable to (D)TLS protocol vesions prior to 1.3: truncated_hmac, srp, encrypt_then_mac, extended_master_secret, session_ticket, and renegotiation_info are not applicable to TLS 1.3.
 
+
+
+
+
+
+
+
+Salowey & Turner         Expires April 23, 2017                 [Page 7]
+
+Internet-Draft         D/TLS IANA Registry Updates          October 2016
+
+
 13.  Orphaned Registries
 
    To make it clear that (D)TLS 1.3 has orphaned certain registries
@@ -386,13 +410,6 @@ The following extensions are only applicable to (D)TLS protocol vesions prior to
 
    o  Add the following to the TLS Hash Algorithm [RFC5246] and TLS
       SignatureAlgorithm registries [RFC5246]:
-
-
-
-Salowey & Turner         Expires April 23, 2017                 [Page 7]
-
-Internet-Draft         D/TLS IANA Registry Updates          October 2016
-
 
       Note:
 
@@ -425,6 +442,14 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
               Compression Methods", RFC 3749, DOI 10.17487/RFC3749, May
               2004, <http://www.rfc-editor.org/info/rfc3749>.
 
+
+
+
+Salowey & Turner         Expires April 23, 2017                 [Page 8]
+
+Internet-Draft         D/TLS IANA Registry Updates          October 2016
+
+
    [RFC4680]  Santesson, S., "TLS Handshake Message for Supplemental
               Data", RFC 4680, DOI 10.17487/RFC4680, October 2006,
               <http://www.rfc-editor.org/info/rfc4680>.
@@ -438,17 +463,6 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
               IANA Considerations Section in RFCs", BCP 26, RFC 5226,
               DOI 10.17487/RFC5226, May 2008,
               <http://www.rfc-editor.org/info/rfc5226>.
-
-
-
-
-
-
-
-Salowey & Turner         Expires April 23, 2017                 [Page 8]
-
-Internet-Draft         D/TLS IANA Registry Updates          October 2016
-
 
    [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
               (TLS) Protocol Version 1.2", RFC 5246,
@@ -482,6 +496,16 @@ Internet-Draft         D/TLS IANA Registry Updates          October 2016
               Security (TLS) Versions 1.2 and Earlier", draft-ietf-tls-
               rfc4492bis-08 (work in progress), July 2016.
 
+
+
+
+
+
+Salowey & Turner         Expires April 23, 2017                 [Page 9]
+
+Internet-Draft         D/TLS IANA Registry Updates          October 2016
+
+
    [RFC2434]  Narten, T. and H. Alvestrand, "Guidelines for Writing an
               IANA Considerations Section in RFCs", RFC 2434,
               DOI 10.17487/RFC2434, October 1998,
@@ -500,34 +524,10 @@ Authors' Addresses
    Email: joe@salowey.net
 
 
-
-Salowey & Turner         Expires April 23, 2017                 [Page 9]
-
-Internet-Draft         D/TLS IANA Registry Updates          October 2016
-
-
    Sean Turner
    sn3rd
 
    Email: sean@sn3rd.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
