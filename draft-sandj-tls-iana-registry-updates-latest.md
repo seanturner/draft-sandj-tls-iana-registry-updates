@@ -2,7 +2,7 @@
 title: D/TLS IANA Registry Updates
 abbrev: D/TLS IANA Registry Updates
 docname: draft-sandj-tls-iana-registry-updates-latest
-date: 2016-09-07
+date: 2016-10-20
 category: std
 updates: 3749, 5077, 4680, 5246, 5878, 6520, 7301
 
