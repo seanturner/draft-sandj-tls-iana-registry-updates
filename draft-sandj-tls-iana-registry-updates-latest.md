@@ -214,7 +214,9 @@ TLS Exporter Label Registry
 
 IANA is to add the following note to the TLS Exporter Label Registry:
 
-     {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different.
+    Note:
+
+    {{RFC5705}} defines keying material exporters for TLS in terms of the TLS PRF. {{I-D.ietf-tls-tls13}} replaced the PRF with HKDF, thus requiring a new construction. The exporter interface remains the same, however the value is computed different.
 
 Add Missing Item to TLS Alert Registry
 ===========================================================
