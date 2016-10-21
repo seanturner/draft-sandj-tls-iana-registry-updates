@@ -176,6 +176,8 @@ TLS_DHE_PSK_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAD}
 
 - Add the following:
 
+    WARNING: Cryptographic algorithms will be broken or weakened over time.  Blindly implementing cipher suites listed here is not advised.  Implementers and users need to check that the cryptographic algorithms listed continue to provide the expected level of security.
+
     Notes:
 
     Although TLS 1.3 uses the same cipher suite space as previous versions of TLS, TLS 1.3 cipher suites are defined differently, only specifying the symmetric ciphers, and cannot it be used for TLS 1.2. Similarly, TLS 1.2 and lower cipher suites cannot be used with TLS 1.3.
