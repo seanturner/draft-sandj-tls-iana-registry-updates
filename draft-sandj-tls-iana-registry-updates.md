@@ -92,9 +92,7 @@ IANA is to update the names of the following registries to add "TLS" to for cons
 - Heartbeat Modes, and
 - Supported Groups.
 
-IANA is also to add a reference to this document for the registry whose names have been updated as a result of the above change.
-
-NOTE: Henceforth in this document the registries will be referred to using the "TLS" prefix.
+IANA is also to add a reference to this document for the registry whose names have been updated as a result of the above change.  The remainder of this document will use the registry names with the "TLS" prefix.
 
 Aligning with RFC 5226
 ======================
@@ -104,7 +102,7 @@ Many of the TLS-related IANA registries were defined prior to {{RFC5226}} where 
 - TLS Authorization Data Formats
 - TLS Supplemental Data Formats (SupplementalDataType)
 
-NOTE: This is not a universal change as some registries originally defined with "IETF Consensus" are undergoing other changes either as a result of this document or {{I-D.ietf-tls-rfc4492bis}}.
+This is not a universal change as some registries originally defined with "IETF Consensus" are undergoing other changes either as a result of this document or {{I-D.ietf-tls-rfc4492bis}}.
 
 TLS ExtensionType Values
 ========================
@@ -132,7 +130,7 @@ IANA is to update the TLS Cipher Suite registry as follows:
 
 - Add a "Recommended" column to the cipher suite registry.  The cipher suites that follow in the two tables are marked as "Yes". All other cipher suites are marked as "No".
 
-NOTE: The cipher suites that follow are standards track server-authenticated (and optionally client-authenticated) cipher suites which are currently available in TLS 1.2. The notable exception are the ECDHE AES GCM cipher suites which are not yet standards track prior to the publication of this specification, but this document promotes those 4 cipher suites to standards track (see TO-DO insert reference).
+The cipher suites that follow are standards track server-authenticated (and optionally client-authenticated) cipher suites which are currently available in TLS 1.2. The notable exception are the ECDHE AES GCM cipher suites which are not yet standards track prior to the publication of this specification, but this document promotes those 4 cipher suites to standards track (see TO-DO insert reference).
 
 ~~~
 Cipher Suite Name                             | Value
@@ -152,7 +150,7 @@ TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 | {0xCC,0xA9}
 TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256     | {0xCC,0xAA}
 ~~~
 
-NOTE: The cipher suites that follow are standards track ephemeral pre-shared key cipher suites which are available in TLS 1.2.  {{!RFC6655}} is inconsistent with respect to the ordering of components within PSK AES CCM cipher suite names; those names are used here without modification.
+The cipher suites that follow are standards track ephemeral pre-shared key cipher suites which are available in TLS 1.2.  {{!RFC6655}} is inconsistent with respect to the ordering of components within PSK AES CCM cipher suite names; those names are used here without modification.
 
 ~~~
 Cipher Suite Name                             | Value
