@@ -65,9 +65,9 @@ In this document, we use the term "(D)TLS" to refer to registries that apply to 
 
 - Add "TLS" to registries' names for consistency with other TLS-related registries.
 
-- Change the IANA registry policy {{RFC5226}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These more relaxes rules are more condusive to TBD.
+- Change the IANA registry policy {{RFC5226}} for the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries.  These changes register a small part of these code spaces for experimentation and private use.
 
-- Add the designated expert intructions as a note to the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries to inform IANA-registry-focused, non-RFC-reading what's expected from the registry.
+- Add the designated expert intructions as a note to the TLS ExtensionType Values, TLS Cipher Suite, and TLS ClientCertificateType Identifiers registries to inform users of the registry.
 
 - Add notes to indicate whether an extension, certain values of an extension, or an entire registry is only applicable pre-(D)TLS 1.3.
 
@@ -77,11 +77,9 @@ In this document, we use the term "(D)TLS" to refer to registries that apply to 
 
 - Add missing entry to the TLS Alert Registry for the no_application_protocol alert defined in {{RFC7301}}
 
-This document proposes no changes to the TLS Alert {{I-D.ietf-tls-tls13}}, TLS ContentType {{I-D.ietf-tls-tls13}}, TLS HandshakeType, {{I-D.ietf-tls-tls13}} and TLS Certificate Status Types {{RFC6961}}; Standards Action, for the 1st three, and IETF Review, for the last, are appropriate for these one-byte code points because of their scarcity.
+This document proposes no changes to the registration policies for TLS Alert {{I-D.ietf-tls-tls13}}, TLS ContentType {{I-D.ietf-tls-tls13}}, TLS HandshakeType, {{I-D.ietf-tls-tls13}} and TLS Certificate Status Types {{RFC6961}}; the existing policies (Standards Action for the first three; IETF Review for the last), are appropriate for these one-byte code points because of their scarcity.
 
-This document proposes no changes to the EC Curve Type, EC Point Format registries , and Supported Groups Registry (see {{I-D.ietf-tls-rfc4492bis}}).
-
-The lengthy updates header is a result of requests for IANA to refer to this draft in addition to the original RFC that defined a particular registry.
+This document proposes no changes to the EC Curve Type, EC Point Format, and Supported Groups Registries (see {{I-D.ietf-tls-rfc4492bis}}).
 
 Add "TLS" to Registry Names
 ===========================
@@ -106,7 +104,7 @@ Many of the TLS-related IANA registries were defined prior to {{RFC5226}} where 
 - TLS Authorization Data Formats
 - TLS Supplemental Data Formats (SupplementalDataType)
 
-NOTE: Not that this is not a universal change as some registries originally defined with "IETF Consensus" are undergoing other changes either as a result of this document or {{I-D.ietf-tls-rfc4492bis}}.
+NOTE: This is not a universal change as some registries originally defined with "IETF Consensus" are undergoing other changes either as a result of this document or {{I-D.ietf-tls-rfc4492bis}}.
 
 TLS ExtensionType Values
 ========================
@@ -115,13 +113,13 @@ IANA is to update the TLS ExtensionType Values registry as follows:
 
 - Change the registry policy to:
 
-    Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC5226}}.
+  : Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC5226}}.
 
 - Update the "References" to also refer to this document.
 
 - Add the following note:
 
-    Note: Experts are to verify that there is in fact a publicly available standard.
+  :  Note: Experts are to verify that there is in fact a publicly available standard.
 
 TLS Cipher Suite Registry
 =========================
@@ -130,7 +128,7 @@ IANA is to update the TLS Cipher Suite registry as follows:
 
 - Change the registry policy to:
 
-    Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC2434}}.
+  : Values with the first byte in the range 0-254 (decimal) are assigned via Specification Required {{RFC5226}}.  Values with the first byte 255 (decimal) are reserved for Private Use {{RFC2434}}.
 
 - Add a "Recommended" column to the cipher suite registry.  The cipher suites that follow in the two tables are marked as "Yes". All other cipher suites are marked as "No".
 
